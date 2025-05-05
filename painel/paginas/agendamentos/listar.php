@@ -157,7 +157,7 @@ echo <<<HTML
 		<ul class="dropdown-menu" style="margin-left:-100px;">
 		<li>
 		<div class="notification_desc2">
-		<p>Confirmar Agendamento? <a href="#" onclick="confirmar('{$id}', '{$horaF}')"><span class="text-success">Sim</span></a></p>
+		<p>Confirma o Agendamento? <a href="#" onclick="confirmar('{$id}', '{$horaF}')"><span class="text-success">Sim</span></a></p>
 		</div>
 		</li>										
 		</ul>
@@ -166,7 +166,8 @@ echo <<<HTML
 
         	
 
-        			<a class="{$ocultar_pago}" href="#" onclick="baixar('{$id}', '{$cliente}', '{$nome_serv}', '{$valor_serv}','{$aceita_convenio}','{$funcionario}','{$servico}')" title="Baixa no Pagamento" class=""> <img class="icon-rounded-vermelho" src="img/{$classe_pago}" width="15px" height="15px"></a>
+        			<a class="{$ocultar_pago}" href="#" onclick="baixar('{$id}', '{$cliente}', '{$nome_serv}', 
+					'{$valor_serv}','{$aceita_convenio}','{$funcionario}','{$servico}')" title="Baixa no Pagamento" class=""> <img class="icon-rounded-vermelho" src="img/{$classe_pago}" width="15px" height="15px"></a>
 
 
         			</h5>

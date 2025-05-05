@@ -15,7 +15,8 @@ if(@$agendamentos == 'ocultar'){
 
 <div class="row">
 	<div class="col-md-4">
-		<button style="margin-bottom:10px" onclick="inserir()" type="button" class="btn btn-primary btn-flat btn-pri"><i class="fa fa-plus" aria-hidden="true"></i> Novo Agendamento</button>
+		<button style="margin-bottom:10px" onclick="inserir()" type="button" class="btn btn-primary btn-flat btn-pri">
+			<i class="fa fa-plus" aria-hidden="true"></i> Novo Agendamento</button>
 	</div>
 
 	<?php 
@@ -317,7 +318,8 @@ if(@$agendamentos == 'ocultar'){
 						<div class="col-md-8" id="div_convenio">						
 							<div class="form-group"> 
 								<label>Convênio </label> 
-								<select class="form-control" id="convenio" name="convenio" style="width:100%;" onchange="calcularValor()">
+								<select class="form-control" id="convenio" name="convenio" style="width:100%;"
+								 onchange="calcularValor()">
 
 								<option value="">Selecione um Convênio</option> 
 

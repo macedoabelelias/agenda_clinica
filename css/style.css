@@ -176,6 +176,22 @@ margin-right: 5px;
   color: green;
 }
 
+.cardTarefas{
+  margin-bottom: 10px;
+  margin-left: 9px;
+}
+
+@media only screen and (max-width: 700px){
+  .cardTarefas{
+    margin-bottom: 10px;
+    margin-left: 5px;
+  }
+
+  .esc{
+    display: none;
+  }
+}
+
 
 
 

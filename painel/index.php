@@ -245,10 +245,12 @@ if($linhas > 0){
 									<i class="fa fa-angle-left pull-right"></i>
 								</a>
 								<ul class="treeview-menu">
-									<li class="<?php echo $agendamentos ?>"><a href="index.php?pagina=agendamentos"><i class="fa fa-angle-right"></i> Agendamentos</a></li>
+									<li class="<?php echo $agendamentos ?>"><a href="index.php?pagina=agendamentos">
+										<i class="fa fa-angle-right"></i> Agendamentos</a></li>
 
-
-									<li class="<?php echo $rel_agendamentos ?>"><a href="" data-toggle="modal" data-target="#modalRelAgendamento"><i class="fa fa-angle-right"></i> Relatórios Agendamentos</a></li>
+									<li class="<?php echo $rel_agendamentos ?>"><a href="" data-toggle="modal" 
+									data-target="#modalRelAgendamento"><i class="fa fa-angle-right"></i> 
+									Relatórios Agendamentos</a></li>
 									
 									
 								</ul>
@@ -398,7 +400,7 @@ if($linhas > 0){
 								<div class="profile_img">	
 									<span class="prfil-img"><img src="images/perfil/<?php echo $foto_usuario ?>" alt="" width="50px" height="50px"> </span> 
 									<div class="user-name esc">
-										<p><?php echo $nome_usuario ?></p>
+										<!-- <p><?php echo $nome_usuario ?></p> -->
 										<span><?php echo $nivel_usuario ?></span>
 									</div>
 									<i class="fa fa-angle-down lnr"></i>

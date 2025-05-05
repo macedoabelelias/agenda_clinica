@@ -53,7 +53,9 @@ if(strtotime($data_pgto) <=  strtotime($data_atual)){
 
 	if($comissao > 0){
 	//lançar a conta a pagar para a comissão do funcionário
-	$pdo->query("INSERT INTO pagar SET descricao = '$descricao2', referencia = 'Comissão', valor = '$valor_comissao', data_lanc = '$data_pgto', data_venc = '$data_pgto', usuario_lanc = '$usuario_logado', arquivo = 'sem-foto.png', pago = 'Não', funcionario = '$funcionario', id_ref = '$servico'");
+	$pdo->query("INSERT INTO pagar SET descricao = '$descricao2', referencia = 'Comissão', valor = '$valor_comissao', 
+	data_lanc = '$data_pgto', data_venc = '$data_pgto', usuario_lanc = '$usuario_logado', arquivo = 'sem-foto.png', 
+	pago = 'Não', funcionario = '$funcionario', id_ref = '$servico'");
 	}
 }else{
 	$pago = 'Não';
@@ -65,12 +67,16 @@ if(strtotime($data_pgto) <=  strtotime($data_atual)){
 if($pgto != "Convênio"){
 $foi_pago = 'Sim';
 $convenio = 0;
-$pdo->query("INSERT INTO $tabela SET descricao = '$descricao', referencia = 'Procedimento', valor = '$valor_serv', data_lanc = curDate(), data_venc = '$data_pgto', data_pgto = '$data_pgto2', usuario_lanc = '$usuario_logado', usuario_pgto = '$usuario_baixa', arquivo = 'sem-foto.png', cliente = '$cliente', pago = '$pago', id_ref = '$servico', saida = '$pgto'");
+$pdo->query("INSERT INTO $tabela SET descricao = '$descricao', referencia = 'Procedimento', valor = '$valor_serv', 
+data_lanc = curDate(), data_venc = '$data_pgto', data_pgto = '$data_pgto2', usuario_lanc = '$usuario_logado', 
+usuario_pgto = '$usuario_baixa', arquivo = 'sem-foto.png', cliente = '$cliente', pago = '$pago', id_ref = '$servico', 
+saida = '$pgto'");
 }else{
 	$foi_pago = 'Não';
 }
 
-$pdo->query("UPDATE agendamentos SET pago = '$foi_pago', tipo_pagamento = '$pgto', valor = '$valor_serv', convenio = '$convenio' where id = '$id_agd'");
+$pdo->query("UPDATE agendamentos SET pago = '$foi_pago', tipo_pagamento = '$pgto', valor = '$valor_serv', 
+convenio = '$convenio' where id = '$id_agd'");
 
 echo 'Salvo com Sucesso'; 
 

@@ -97,7 +97,7 @@ while (strtotime($nova_hora) < strtotime($hora_final_servico)){
 
 
 		if(strtotime($nova_hora) > strtotime($inicio_almoco) and strtotime($nova_hora) < strtotime($final_almoco)){
-		echo 'Este serviço demora cerca de '.$tempo.' minutos, precisa escolher outro horário, pois neste horários não temos disponibilidade devido ao horário de almoço!';
+		echo 'Este serviço demora cerca de '.$tempo.' minutos, escolha outro horário, pois neste horários não temos disponibilidade devido ao horário de almoço!';
 			exit();
 	}
 
